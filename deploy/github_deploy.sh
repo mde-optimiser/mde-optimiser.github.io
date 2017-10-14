@@ -12,7 +12,7 @@ cd gh-pages/
 
 rm -rf ./*
 
-cp ../../src/_site/* ./
+cp ../../src/_site/* ./ -R
 
 git add --all
 
