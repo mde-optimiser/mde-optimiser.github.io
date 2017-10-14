@@ -14,6 +14,8 @@ rm -rf ./*
 
 cp ../../src/_site/* ./ -R
 
+cp ../../Readme.md ./
+
 git add --all
 
 git commit -m "MDEO Website updated"
