@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-git clone -b gh-pages git@github.com:mde-optimiser/mde-optimiser.github.io.git
+git clone -b gh-pages git@github.com:mde-optimiser/mde-optimiser.github.io.git gh-pages
 
 rm -rf gh-pages/*
 
