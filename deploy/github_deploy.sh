@@ -6,9 +6,9 @@ bundle exec jekyll build
 
 cd ../deploy/
 
-git clone -b gh-pages git@github.com:mde-optimiser/mde-optimiser.github.io.git gh-pages
+git clone -b master git@github.com:mde-optimiser/mde-optimiser.github.io.git master
 
-cd gh-pages/
+cd master/
 
 rm -rf ./*
 
@@ -18,10 +18,10 @@ git add --all
 
 git commit -m "MDEO Website updated"
 
-git push origin gh-pages
+git push origin master
 
 cd ..
 
-rm -rf gh-pages
+rm -rf master
 
 echo "Deployment completed"
