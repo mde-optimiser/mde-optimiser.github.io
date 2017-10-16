@@ -1,5 +1,5 @@
 ---
-title: Description
+title: MDEOptimiser
 ---
 
 MDEOptimiser is a tool that allows users to specific MDE optimisation problems
