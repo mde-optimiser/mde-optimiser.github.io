@@ -57,3 +57,8 @@ jar dependencies
 
 If you think you found a bug, please raise a ticket on github.com on the main
 tool repository [here](https://github.com/mde-optimiser/mde_optimiser).
+
+If you have any issues with running the tool or any other questions, please contact one of the authors:
+
+* [Alex Burdusel](https://nms.kcl.ac.uk/alex.burdusel/)
+* [Dr. Steffen Zschaler](http://steffen-zschaler.de)
