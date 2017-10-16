@@ -2,6 +2,8 @@
 
 cd ../src/
 
+rm -rf _site/*
+
 bundle exec jekyll build
 
 cd ../deploy/
