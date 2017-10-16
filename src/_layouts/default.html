@@ -50,6 +50,13 @@
 				</ul>
 
 				<ul>
+					<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
+						{% assign publications = site.html_pages | where: 'url', '/publications/' | first %}
+						<a href="{{ site.baseurl }}/publications/">{{ publications.title }}</a>
+					</li>
+				</ul>
+
+				<ul>
 					{% assign grouped = site.docs | group_by: 'category' %}
 					{% for group in grouped %}
 						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
