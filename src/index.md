@@ -26,7 +26,7 @@ use from one of the Eclipse Update sites below.
 
 ### Installation steps
 
-It is recommended to start from an 
+It is recommended to start from an
 [Eclipse For Java and  DSL Developers](https://www.eclipse.org/downloads/packages/release/Oxygen/1A) distribution.
 
 * Copy the desired `MDEO` release version `Eclipse` update site url from above.
@@ -39,17 +39,21 @@ It is recommended to start from an
 ### First MDEO project
 
 For a set of MDEO example projects please browse the Case Studies section of this website.
-The source code of the case studies can be browsed on 
+The source code of the case studies can be browsed on
 [http://github.com/mde-optimiser/case_studies](https://github.com/mde-optimiser/case_studies)
 and they can be imported as existing Eclipse projects.
 
 To run the code for a case study:
 
 * Create a new `MDEOptimiser Search Run Configuration` in Eclipse,
-* Choose the desired \*.mopt file you would like to run, 
+* Choose the desired \*.mopt file you would like to run,
 * Make sure that the project classpath contains the example MDEO project and any of its required
 jar dependencies
 * Run the search by pressing the Run button.
 * Inspect the results in the `mdeo-results` folder created at the end of a successful Search.
 
 
+### Problems and bugs
+
+If you think you found a bug, please raise a ticket on github.com on the main
+tool repository [here](https://github.com/mde-optimiser/mde_optimiser).
