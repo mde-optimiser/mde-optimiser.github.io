@@ -14,21 +14,21 @@
 
 		<link type="application/atom+xml" rel="alternate" href="https://mde-optimiser.github.io/feed.xml" title="MDEOptimiser" />
 		<!-- Begin Jekyll SEO tag v2.0.0 -->
-<title>Change Log - MDEOptimiser</title>
-<meta property="og:title" content="Change Log" />
+<title>MDEO DSL - MDEOptimiser</title>
+<meta property="og:title" content="MDEO DSL" />
 <meta name="description" content="Tool documentation website for MDEOptimiser." />
 <meta property="og:description" content="Tool documentation website for MDEOptimiser." />
-<link rel="canonical" href="https://mde-optimiser.github.io/changelog/" />
-<meta property="og:url" content="https://mde-optimiser.github.io/changelog/" />
+<link rel="canonical" href="https://mde-optimiser.github.io/dsl/" />
+<meta property="og:url" content="https://mde-optimiser.github.io/dsl/" />
 <meta property="og:site_name" content="MDEOptimiser" />
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "WebPage",
-    "headline": "Change Log",
+    "headline": "MDEO DSL",
     "description": "Tool documentation website for MDEOptimiser.",
     "logo": "https://mde-optimiser.github.io/siteicon.png",
-    "url": "https://mde-optimiser.github.io/changelog/"
+    "url": "https://mde-optimiser.github.io/dsl/"
   }
 </script>
 <!-- End Jekyll SEO tag -->
@@ -65,7 +65,7 @@
 				</ul>
 
 				<ul>
-					<li class="nav-item top-level ">
+					<li class="nav-item top-level current">
 						
 						<a href="/dsl/">MDEO DSL</a>
 					</li>
@@ -94,7 +94,7 @@
 				</ul>
 
 				<ul>
-					<li class="nav-item top-level current">
+					<li class="nav-item top-level ">
 						
 						<a href="/changelog/">Change Log</a>
 					</li>
@@ -105,26 +105,41 @@
 		<section class="main">
 			<div class="page-header">
 				<!--<h2>MDEOptimiser</h2>-->
-				<h3>Change Log</h3>
+				<h3>MDEO DSL</h3>
 			</div>
 			<article class="content">
-				<p>Subscribe with <a href="/feed.xml">RSS</a> to keep up with the latest changes.</p>
+				<p>If you would like to inspect the source code or contribute to the project please
+follow these instructions for the recommended steps on how you can do this.</p>
 
-<div class="changelog">
-	
-		<div class="changelog-item">
-			<h3>MDEOptimiser public release</h3>
-			<p><span class="date">October 15, 2017</span> <span class="badge major">major</span></p>
+<p>The only changes accepted to the project will be accepted as pull requests to
+the <code class="highlighter-rouge">github.com/mde-optimiser/mde_optimiser</code> repository.</p>
 
-			<p>This is the first public release of MDEOptimiser.</p>
+<p>Any pull request must be added to the <code class="highlighter-rouge">develop</code> branch. When a pull request is
+created a build will be triggered and if successful the <code class="highlighter-rouge">develop</code> repository will
+be updated with the just built version of the code.</p>
 
-<p>Follow the instructions on the <a href="index.html">Description</a> page to install
-this version of the tool.</p>
+<h2 id="prerequisites">Prerequisites</h2>
 
+<ul>
+  <li>Install the <a href="https://www.eclipse.org/downloads/packages/release/Oxygen/1A">Eclipse For Java and  DSL Developers</a>
+distribution or install XText and XTend and their dependencies in your current
+Eclipse installation.</li>
+  <li>Install and configure the <a href="https://maven.apache.org">Maven</a> build tool and add
+it to the command line path. Recommended minimum version is <code class="highlighter-rouge">3.3.9</code>.</li>
+</ul>
 
-		</div>
-	
-</div>
+<h2 id="getting-the-mdeo-code">Getting the MDEO code</h2>
+
+<ul>
+  <li>Clone the MDEOptimiser repo from <code class="highlighter-rouge">https://github.com/mde-optimiser/mde_optimiser</code></li>
+  <li>Run <code class="highlighter-rouge">mvn clean compile</code> inside the <code class="highlighter-rouge">src</code> directory of the directory where you
+cloned the repository.</li>
+  <li>Open Eclipse and go to <code class="highlighter-rouge">File &gt; Import &gt; Existing Maven Projects</code> and navigate
+to the src folder located in the mde_optimiser folder where the repository has
+been cloned.</li>
+  <li>Ensure that the workspace builds without any problems or if there are any problems
+reported by the Eclipse builder try to fix them.</li>
+</ul>
 
 			</article>
 		</section>
