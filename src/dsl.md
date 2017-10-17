@@ -2,31 +2,23 @@
 title: MDEO DSL
 ---
 
-If you would like to inspect the source code or contribute to the project please
-follow these instructions for the recommended steps on how you can do this.
 
-The only changes accepted to the project will be accepted as pull requests to
-the `github.com/mde-optimiser/mde_optimiser` repository.
+![MDEO DSL](/images/dsl.png)
 
-Any pull request must be added to the `develop` branch. When a pull request is
-created a build will be triggered and if successful the `develop` repository will
-be updated with the just built version of the code.
 
-## Prerequisites
+## DSL
 
-* Install the [Eclipse For Java and  DSL Developers](https://www.eclipse.org/downloads/packages/release/Oxygen/1A)
-distribution or install XText and XTend and their dependencies in your current
-Eclipse installation.
-* Install and configure the [Maven](https://maven.apache.org) build tool and add
-it to the command line path. Recommended minimum version is `3.3.9`.
-
-## Getting the MDEO code
-
-* Clone the MDEOptimiser repo from `https://github.com/mde-optimiser/mde_optimiser`
-* Run `mvn clean compile` inside the `src` directory of the directory where you
-cloned the repository.
-* Open Eclipse and go to `File > Import > Existing Maven Projects` and navigate
-to the src folder located in the mde_optimiser folder where the repository has
-been cloned.
-* Ensure that the workspace builds without any problems or if there are any problems
-reported by the Eclipse builder try to fix them.
+* `basepath` - This refers to the basepath relative to the project root, where
+the optimisation artifacts can be found.
+* `metamodel` - This specifies the name of the ecore metamodel file. The filename
+is relative to the `basepath`.
+* `model` - This specifies the input model file name, relative to the `basepath`
+* `objective` - This specifies the objective function. The objective can be specified
+using OCL or Java/XTend by implementing the IGuidanceFunction interface.
+* `constraint` - This specifies the constraint to be used during the optimisation.
+The constraint can be specified using OCL or Java/XTend by implementing the IGuidanceFunction.
+* `mutate` - This specifies the Henshin mutation rule to be used during the search.
+* `breed` - This specifies the Henshin breeding rule to be used during the search.
+The different between `mutate` and `breed` is that `breed` takes two parents as input
+as opposed to one for `mutate`
+* `optimisation` - This specifies the optimsation algorithm configuration.
