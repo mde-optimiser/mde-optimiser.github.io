@@ -45,12 +45,26 @@
 				<ul>
 					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
 						{% assign home = site.html_pages | where: 'url', '/' | first %}
-						<a href="{{ site.baseurl }}/">Tool Description</a>
+						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
 					</li>
 				</ul>
 
 				<ul>
-					<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
+					<li class="nav-item top-level {% if page.url == '/developers/' %}current{% endif %}">
+						{% assign developers = site.html_pages | where: 'url', '/developers/' | first %}
+						<a href="{{ site.baseurl }}/developers/">{{ developers.title }}</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level {% if page.url == '/dsl/' %}current{% endif %}">
+						{% assign dsl = site.html_pages | where: 'url', '/dsl/' | first %}
+						<a href="{{ site.baseurl }}/dsl/">{{ dsl.title }}</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level {% if page.url == '/publications/' %}current{% endif %}">
 						{% assign publications = site.html_pages | where: 'url', '/publications/' | first %}
 						<a href="{{ site.baseurl }}/publications/">{{ publications.title }}</a>
 					</li>
