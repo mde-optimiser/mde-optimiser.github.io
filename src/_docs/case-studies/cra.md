@@ -1,5 +1,5 @@
 ---
-title: Class Resposability Assignment
+title: Class Responsibility Assignment
 category: Case Studies
 order: 2
 ---
