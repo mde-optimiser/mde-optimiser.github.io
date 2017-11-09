@@ -29,7 +29,7 @@ use from one of the Eclipse Update sites below.
 It is recommended to start from an
 [Eclipse For Java and  DSL Developers](https://www.eclipse.org/downloads/packages/release/Oxygen/1A) distribution. Currently, MDEOptimiser has been tested with Eclipse Oxygen.
 
-* Copy the desired `MDEO` release version `Eclipse` update site url from above.
+* Copy the desired MDEO version `Eclipse` update site url from above.
 * Open the `Eclipse > Help > Install New Software` window.
 * In the Install window add the installation url to the `Work with` field.
 * From the list of software available to install tick the `MDEOptimise` group.
