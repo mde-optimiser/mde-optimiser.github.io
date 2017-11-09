@@ -46,11 +46,11 @@ and they can be imported as existing Eclipse projects.
 To run the code for a case study:
 
 * Create a new `MDEOptimiser Search Run Configuration` in Eclipse,
-* Choose the desired \*.mopt file you would like to run,
+* Choose the desired `\*.mopt` file you would like to run,
 * Make sure that the project classpath contains the example MDEO project and any of its required
 jar dependencies
-* Run the search by pressing the Run button.
-* Inspect the results in the `mdeo-results` folder created at the end of a successful Search.
+* Run the search by pressing the `Run` button.
+* Inspect the results in the `mdeo-results` folder created at the end of a successful search.
 
 
 ### Problems and bugs
