@@ -38,7 +38,7 @@ It is recommended to start from an
 
 ### First MDEO project
 
-For a set of MDEO example projects please browse the Case Studies section of this website.
+For a set of MDEO example projects please browse the [Case Studies](/case-studies/cra/) section of this website.
 The source code of the case studies can be browsed on
 [http://github.com/mde-optimiser/case_studies](https://github.com/mde-optimiser/case_studies)
 and they can be imported as existing Eclipse projects.
