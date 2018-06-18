@@ -20,6 +20,19 @@ In this case study we show a one-to-many persuasion setting, where a single pers
 This is a challenging problem because of the number of potential solutions and the number of audience members to evaluate against: to exhaustively explore the solution space, for each subset of the persuader's arguments one must consider each audience member
 and determine whether it would be convinced by those arguments.
 
-To efficiently determine the arguments the persuader should assert, i.e., its {\em strategy}, we apply techniques from search-based model engineering.
+To efficiently determine the arguments the persuader should assert, i.e., its strategy, we specify the problem using search-based model engineering.
 
 By representing the persuasion setting as a meta-model (a schema describing the structure of valid solutions), we can apply evolutionary search to a find a near-optimal strategy for the persuader that maximises the number of convinced audience members. 
+
+#### Implementation
+
+
+![One to Many Persuasion Games Metamodel](/images/case_studies/argumentation/metamodel.png)
+
+In the figure above, we show a metamodel of this problem. The goal of this problem is to find a strategy that is effective and efficient. We have specified this problem both as a single-objective and multi-objective problem. 
+
+In the single-objective case we are only measuring the effectiveness. While in the multi-objective case we are measuring both effecitiveness and efficiency.
+
+In the figure below, we show an implementation of the case study using our DSL.
+
+![One to Many Persuasion Games DSL](/images/case_studies/argumentation/dsl.png)
