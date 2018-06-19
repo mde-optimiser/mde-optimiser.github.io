@@ -86,7 +86,7 @@
 							<a href="/case-studies/default/">Case Studies</a>
 							<ul>
 								
-									<li class="nav-item "><a href="/case-studies/default/">Description</a></li>
+									<li class="nav-item "><a href="/case-studies/default/">Overview</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
 								
@@ -99,6 +99,18 @@
 									<li class="nav-item "><a href="/case-studies/scrum/">Scrum Planning</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/stacks/">Stack</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/mutation_generation/overview/">Mutation Generation</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/mutation_generation/overview/">Overview</a></li>
+								
+									<li class="nav-item "><a href="/mutation_generation/acpso_generation/">aCPSO Generation</a></li>
 								
 							</ul>
 						</li>
@@ -167,7 +179,7 @@
 
 					"case-studies-default": {
 						"id": "case-studies-default",
-						"title": "Description",
+						"title": "Overview",
 						"category": "",
 						"url": " /case-studies/default/",
 						"content": "In this section we introduce a list of case studies that have been solved using MDEOptimiser. For each case study we include a brief introduction, followed by a brief implementation description. In our Github repository containing all the implementations you will find all the implementation artifacts along with instructions on how to run them where required."
@@ -239,6 +251,40 @@
 						"category": "",
 						"url": " /case-studies/stacks/",
 						"content": "This case has also been taken from the MOMoT tool website. Introduction The case study is the same as the one described by the MOMoT authors. The only difference is our model based apporach to solve it compared to the rule based approach emplyed by the MOMoT tool."
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"mutation-generation-acpso-generation": {
+						"id": "mutation-generation-acpso-generation",
+						"title": "aCPSO Generation",
+						"category": "",
+						"url": " /mutation_generation/acpso_generation/",
+						"content": "Node Manipulation A list of the supported node manipulation multiplicities is included in the tables below. The first table shows the node creation operators. The second table contains the node deletion operators. Create Node n=0 n=1 and m &gt; n n &gt; 1 and m &gt; n n = m k &gt;= 0 l &gt; k l &lt; * c A Create A add n B (f#l A) Create A lb r single B Create A add n B Create A lb r single B Create A lb r many B Create A add n B (f#l A) k &gt;= 0 l = *   Create A add n B     k = l   Create A lb r single B Create A add n B Create A lb r single B Create A lb r many B N A Delete Node m &gt; n and m &lt; * m = * n = m k = 0 Delete A     k &gt; 0l &gt; k Delete A (require each B still has #k A)     k=l=1 Delete A r lb sg B (f#m A) Delete A r lb sg B N A k=l &gt; 1 Delete A r lb sg B (f#m A) d A r lb mm B (f#m A) Delete A r lb sg B d A r lb mm B N A Edge Manipulation The list of supported multiplicities for generating edge manipulation search operators is included in the tables below. The first table contains the edge creation supported multiplicities and the generated operators. The second table contains the operators generated for edge removal. Edge Creation m &lt; * m = * n=m l &lt; * Add edge NAC A B Add edge NAC B Swap edge l = * Add edge NAC A Add edge Swap edge k = l Change edge (P N A) Change edge (P N A) Swap edge Edge Removal n = 0 n &gt; 0 n = m k = 0 Remove edge Remove edge PAC A Swap Edge k &gt; 0 Remove edge PAC B Remove edge PAC AB Swap Edge k = l Change edge (P N A) Change edge (P N A) Swap Edge"
+					}
+
+					
+				
+			
+		
+			
+				
+					,
+					
+
+					"mutation-generation-overview": {
+						"id": "mutation-generation-overview",
+						"title": "Overview",
+						"category": "",
+						"url": " /mutation_generation/overview/",
+						"content": "In this section we describe the mutation generation features implemented in MDEOptimiser. Currently the tool supports only the automatic generation of atomic consistency preserving search operators(aCPSO)."
 					}
 
 					
