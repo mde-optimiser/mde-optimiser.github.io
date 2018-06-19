@@ -53,6 +53,10 @@ jar dependencies
 * Inspect the results in the `mdeo-results` folder created at the end of a successful search.
 
 
+### Tutorial
+
+Users can find the artifacts of a tutorial Henshin: A Model Transformation Language and its Use for Search-Based Model Optimisation in MDEOptimiser at this [url](http://danielstrueber.de/tutorial/).
+
 ### Problems and bugs
 
 If you think you found a bug, please raise a ticket on github.com on the main
