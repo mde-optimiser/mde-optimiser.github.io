@@ -83,14 +83,16 @@
 					
 						<li class="nav-item top-level ">
 							
-							<a href="/case-studies/argumentation/">Case Studies</a>
+							<a href="/case-studies/default/">Case Studies</a>
 							<ul>
+								
+									<li class="nav-item "><a href="/case-studies/default/">Description</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/argumentation/">One To Many Persuasion Games</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/cra/">Class Resposability Assignment</a></li>
-								
-									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/resource/">Resource Allocation</a></li>
 								
@@ -123,20 +125,54 @@
 <h2 id="dsl">DSL</h2>
 
 <ul>
-  <li><code class="highlighter-rouge">basepath</code> - This refers to the basepath relative to the project root, where
-the optimisation artifacts can be found.</li>
-  <li><code class="highlighter-rouge">metamodel</code> - This specifies the name of the ecore metamodel file. The filename
-is relative to the <code class="highlighter-rouge">basepath</code>.</li>
-  <li><code class="highlighter-rouge">model</code> - This specifies the input model file name, relative to the <code class="highlighter-rouge">basepath</code></li>
-  <li><code class="highlighter-rouge">objective</code> - This specifies the objective function. The objective can be specified
-using OCL or Java/XTend by implementing the IGuidanceFunction interface.</li>
-  <li><code class="highlighter-rouge">constraint</code> - This specifies the constraint to be used during the optimisation.
-The constraint can be specified using OCL or Java/XTend by implementing the IGuidanceFunction.</li>
-  <li><code class="highlighter-rouge">mutate</code> - This specifies the Henshin mutation rule to be used during the search.</li>
-  <li><code class="highlighter-rouge">breed</code> - This specifies the Henshin breeding rule to be used during the search.
+  <li>
+    <p><code class="highlighter-rouge">basepath</code> - This refers to the basepath relative to the project root, where
+the optimisation artifacts can be found.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">metamodel</code> - This specifies the name of the ecore metamodel file. The filename
+is relative to the <code class="highlighter-rouge">basepath</code>. Using this keyword it is possible to also specify the namespace of an EPackage class that can be instantiated to load the metamodel at runtime. Refer to the Resource Allocation case study for an example.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">model</code> - This specifies the input model file name, relative to the <code class="highlighter-rouge">basepath</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">initialise</code> - This keyword allows the user to define a custom class that will be used to initialise each of the initial population individuals. For an example implementation please refer to the Resource allocation case study.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">objective</code> - This specifies the objective function. The objective can be specified
+using OCL or Java/XTend by implementing the IGuidanceFunction interface.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">constraint</code> - This specifies the constraint to be used during the optimisation.
+The constraint can be specified using OCL or Java/XTend by implementing the IGuidanceFunction.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">mutate</code> - This specifies the Henshin mutation rule to be used during the search.</p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">breed</code> - This specifies the Henshin breeding rule to be used during the search.
 The different between <code class="highlighter-rouge">mutate</code> and <code class="highlighter-rouge">breed</code> is that <code class="highlighter-rouge">breed</code> takes two parents as input
-as opposed to one for <code class="highlighter-rouge">mutate</code></li>
-  <li><code class="highlighter-rouge">optimisation</code> - This specifies the optimsation algorithm configuration.</li>
+as opposed to one for <code class="highlighter-rouge">mutate</code></p>
+  </li>
+  <li>
+    <p><code class="highlighter-rouge">optimisation</code> - This specifies the optimsation algorithm configuration.</p>
+  </li>
+</ul>
+
+<h4 id="manual-mutation-operators">Manual mutation operators</h4>
+
+<p>The <code class="highlighter-rouge">mutate</code> keyword can be used to specify predefined mutation operators implemented using Henshin. The tool supports both rules and units.</p>
+
+<h4 id="automatic-mutation-generation">Automatic mutation generation</h4>
+
+<p>MDEOptimiser can also be used to automatically generate atomic mutation operators that can create, delete a node and add, remove, change or swap an edge.</p>
+
+<p>The syntax to do this is the following:</p>
+
+<ul>
+  <li>mutate {Node} - This specifies that the tool should generate all the combinations of mutation operators for the specified node.</li>
+  <li>mutate {Node, edge} - This specifies that the tool should generate all the combinations of mutation operators for the <code class="highlighter-rouge">edge</code> edge for node <code class="highlighter-rouge">Node</code>.</li>
 </ul>
 
 			</article>

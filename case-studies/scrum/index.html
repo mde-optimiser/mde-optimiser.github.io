@@ -22,13 +22,13 @@
 <meta property="og:url" content="https://mde-optimiser.github.io/case-studies/scrum/" />
 <meta property="og:site_name" content="MDEOptimiser" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-06-18T04:48:18+01:00" />
+<meta property="article:published_time" content="2018-06-19T04:01:58+01:00" />
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "Scrum Planning",
-    "datePublished": "2018-06-18T04:48:18+01:00",
+    "datePublished": "2018-06-19T04:01:58+01:00",
     "description": "An example CRA case project implemented using MDEOptimiser can be found in this repository.",
     "logo": "https://mde-optimiser.github.io/siteicon.png",
     "url": "https://mde-optimiser.github.io/case-studies/scrum/"
@@ -86,14 +86,16 @@
 					
 						<li class="nav-item top-level current">
 							
-							<a href="/case-studies/argumentation/">Case Studies</a>
+							<a href="/case-studies/default/">Case Studies</a>
 							<ul>
+								
+									<li class="nav-item "><a href="/case-studies/default/">Description</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/argumentation/">One To Many Persuasion Games</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/cra/">Class Resposability Assignment</a></li>
-								
-									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/resource/">Resource Allocation</a></li>
 								
@@ -132,6 +134,40 @@
 <p>The key artifacts of Scrum are the product, product backlog and the sprint backlog. The product backlog is the list of all user stories that when implemented will result in a completed product. The sprint backlog is the list of user stories which the team aim to complete in a sprint. Each user story has an estimated effort metric associated, also called story points, which denotes the required effort to complete the work. A user story is said to be done after all the development and testing work has been done and the output has been signed off and integrated in the final product. The product owner is in charge of prioritising the backlog to make sure the most important user stories are worked on first. For the duration of a project, the development team completes several sprints. The average number of story points resulting from the completed user stories in a sprint is also known as team velocity.</p>
 
 <p>In this case study we will consider that the user stories forming the backlog have an Importance metric, denoting how important they are for a stakeholder, in addition to the Effort metric, which shows the required effort for completion. The product owner is required to prioritise these tasks so that the average stakeholder importance is equally distributed across the sprints required to implement the work items in the backlog. We call this objective the Stakeholder Satisfaction Index and we calculate it as the standard deviation of average stakeholder importance across sprints.</p>
+
+<h4 id="implementation">Implementation</h4>
+
+<p><img src="/images/case_studies/scrum/planning.png" alt="Scrum Planning Metamodel" /></p>
+
+<p>In the figure above, we show a metamodel of this problem. The goal of the problem is to assign WorkItem elements to a number of Sprints with the following objectives:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. [Objective 1] minimise the Sprint effort deviation;
+2. [Objective 2] minimise the Stakeholder Satisfaction Index.
+</code></pre>
+</div>
+
+<p>The problem also has the following constraints:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. [Constraint 1] all WorkItem entities must be assigned to a Sprint;
+2. [Constraint 2] no solution must have more than a specified maximum number of allowed Sprints.
+</code></pre>
+</div>
+
+<p>To explore the search space of the Scrum Planning problem, the mutation operators must create Sprint entities and assign WorkItem elements to them, until all the WorkItem elements belong to a Sprint. The solution constraints include a refined multiplicity (with a lower bound of 1) for the sprints edge between a Plan and Sprint and also for the isPlannedFor edge between a WorkItem and a Sprint.</p>
+
+<p>In the figure below we show an implementation of the case study using our DSL.</p>
+
+<p><img src="/images/case_studies/scrum/dsl.png" alt="Scrum Planning Problem DSL" /></p>
+
+<p>In our implementation we have used four mutation operators to explore the search space. These have been implemented using Henshin and are shown in the figure below.</p>
+
+<p><img src="/images/case_studies/scrum/operators.png" alt="Scrum Planning Search Operators" /></p>
+
+<h4 id="automatic-mutation-generation">Automatic mutation generation</h4>
+
+<p>In the figure below, we include an example of the DSL that allows the user to specify the nodes</p>
+
+<p><img src="/images/case_studies/scrum/rulegen-dsl.png" alt="Next Release Problem DSL" /></p>
 
 			</article>
 		</section>

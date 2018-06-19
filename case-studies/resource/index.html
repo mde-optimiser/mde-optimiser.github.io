@@ -22,13 +22,13 @@
 <meta property="og:url" content="https://mde-optimiser.github.io/case-studies/resource/" />
 <meta property="og:site_name" content="MDEOptimiser" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2018-06-18T04:48:18+01:00" />
+<meta property="article:published_time" content="2018-06-19T04:01:58+01:00" />
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
     "@type": "BlogPosting",
     "headline": "Resource Allocation",
-    "datePublished": "2018-06-18T04:48:18+01:00",
+    "datePublished": "2018-06-19T04:01:58+01:00",
     "description": "This case study has been presented at the Transformation Tool Contest 2018 workshop.",
     "logo": "https://mde-optimiser.github.io/siteicon.png",
     "url": "https://mde-optimiser.github.io/case-studies/resource/"
@@ -86,14 +86,16 @@
 					
 						<li class="nav-item top-level current">
 							
-							<a href="/case-studies/argumentation/">Case Studies</a>
+							<a href="/case-studies/default/">Case Studies</a>
 							<ul>
+								
+									<li class="nav-item "><a href="/case-studies/default/">Description</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/argumentation/">One To Many Persuasion Games</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/cra/">Class Resposability Assignment</a></li>
-								
-									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
 								
 									<li class="nav-item current"><a href="/case-studies/resource/">Resource Allocation</a></li>
 								
@@ -130,7 +132,81 @@
 
 <p>This case study is a combinatorial problem covering the combined challenge of software-variant selection and component-resource allocation. It posits a domain where a system architecture is comprised of a number of components, some of which can be used to satisfy certain functional requests to the system. For each component there are one or more implementations. Each implementation may require other components as well as making requirements on resources allocated to the implementation. In addition to providing the component’s functional services, the implementations provide different levels of non-functional quality. To express how they do this, implementations use a simplified form of parametrised contracts, expressing their requirements on resource provision and the non-functional properties provided by used components and, in return, promising to provide a certain level of quality.</p>
 
-<p>The task is to find an optimal selection of implementations and allocation of resources so that a set of requests can be satisfied. Requests consist of a component to be called as well as conditions on the quality properties to be provided by this component. The overall objective is expressed as a single objective either summarising or selecting the maximum value of one specific quality property for all requests in a model.</p>
+<h4 id="implementation">Implementation</h4>
+
+<p><img src="/images/case_studies/resource-allocation/metamodel.png" alt="Resource Allocation Metamodel" /></p>
+
+<p>In the figure above, we show a metamodel of this problem. The goal of this problem is to find an optimal selection of implementations and allocation of resources so that a set of requests can be satisfied. Requests consist of a component to be called as well as conditions on the quality properties to be provided by this component. The overall objective is expressed as a single objective either summarising or selecting the maximum value of one specific quality property for all requests in a model.</p>
+
+<p>We have specified this problem using a single objective:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. [Objective 1] minimise resource allocation objective;
+2. [Objective 2] minimise the non-functional requirements violations by depending implementations;
+</code></pre>
+</div>
+
+<p>The problem has the following constraints:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1. [Constraint 1] Ensure that all requests are mapped to an implementation;
+2. [Constraint 2] Ensure that each component has one implementation only;
+3. [Constraint 3] Ensure that each resource is only mapped once;
+4. [Constraint 4] Ensure that the request non functional properties are provided by the selected components;
+5. [Constraint 5] Ensure that all the request required compoentns are implemented;
+</code></pre>
+</div>
+
+<p>In the figure below we show an implementation of the case study using our DSL.</p>
+
+<p><img src="/images/case_studies/resource-allocation/dsl.png" alt="Resource Allocation Problem DSL" /></p>
+
+<p>In our implementation we have used four mutation operators to explore the search space. These have been implemented using Henshin and are shown in the figures below.</p>
+
+<h5 id="change-request-implementation-operator">Change Request Implementation Operator</h5>
+
+<p><img src="/images/case_studies/resource-allocation/operators/change-request-implementation-unit.png" alt="Change Request Implementation Unit" /></p>
+
+<p><img src="/images/case_studies/resource-allocation/operators/pick-request.png" alt="Pick Request Rule" /></p>
+
+<p><img src="/images/case_studies/resource-allocation/operators/change-request-implementation-operator.png" alt="Change Request Implementation Rule" /></p>
+
+<h5 id="change-component-mapping-operator">Change Component Mapping Operator</h5>
+
+<p><img src="/images/case_studies/resource-allocation/operators/change-component-mapping-unit.png" alt="Change Component Mapping Unit" /></p>
+
+<p><img src="/images/case_studies/resource-allocation/operators/change-component-mapping-operator.png" alt="Change Component Mapping Operator" /></p>
+
+<p><img src="/images/case_studies/resource-allocation/operators/pick-component-mapping.png" alt="Pick Component Mapping Rule" /></p>
+
+<h5 id="change-resource-mapping-operator">Change Resource Mapping Operator</h5>
+
+<p><img src="/images/case_studies/resource-allocation/operators/change-resource-mapping.png" alt="Change Resource Mapping Operator" /></p>
+
+<h5 id="swap-resource-mapping-operator">Swap Resource Mapping Operator</h5>
+
+<p><img src="/images/case_studies/resource-allocation/operators/swap-resource-mappings.png" alt="Swap Resource Mapping Unit" /></p>
+
+<h4 id="model-initialisation">Model initialisation</h4>
+
+<p><img src="/images/case_studies/resource-allocation/operators/model-initialisation-unit.png" alt="Model Initialisation Unit" /></p>
+
+<p><img src="/images/case_studies/resource-allocation/operators/create-solution.png" alt="Create Solution Rule" /></p>
+
+<p><img src="/images/case_studies/resource-allocation/operators/create-request-map.png" alt="Create Request Map Rule" /></p>
+
+<h4 id="common-operators">Common operators</h4>
+
+<p>These operators are rules or units that are reused by other operators in our implementation.</p>
+
+<h5 id="initialisation-unit">Initialisation Unit</h5>
+
+<p><img src="/images/case_studies/resource-allocation/operators/initialisation-unit.png" alt="Initialisation Unit" /></p>
+
+<p><img src="/images/case_studies/resource-allocation/operators/create-component-map.png" alt="Create Component Map" /></p>
+
+<h5 id="cleanup-unit">Cleanup Unit</h5>
+
+<p><img src="/images/case_studies/resource-allocation/operators/cleanup-unit.png" alt="Cleanup Unit" /></p>
+
 
 			</article>
 		</section>
