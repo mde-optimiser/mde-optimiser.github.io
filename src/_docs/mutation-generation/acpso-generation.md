@@ -4,6 +4,14 @@ category: Mutation Generation
 order: 2
 ---
 
+MDEOptimiser now supports the generation of atomic consistency preserving search operators(aCPSOs). aCPSOs are mutation operators that ensure multiplicity constraint satisfaction after their application.
+
+A description of the currently supported search operators is given in the two sections below. The first section shows node manipulation patterns supported and the second includes edge manipulation cases supported.
+
+The two tables below assume the multiplicity pattern between two nodes as shown in the figure below.
+
+![Multiplicity Patterns](/images/mutation_generation/multiplicity-patterns.png)
+
 ## Node Manipulation
 
 A list of the supported node manipulation multiplicities is included in the tables below. The first table shows the node creation operators. The second table contains the node deletion operators.
