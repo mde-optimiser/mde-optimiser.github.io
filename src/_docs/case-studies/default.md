@@ -1,5 +1,5 @@
 ---
-title: Description
+title: Overview
 category: Case Studies
 order: 1
 ---
