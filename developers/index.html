@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
 		<link rel="stylesheet" href="/css/main.css">
+		<link href="/css/prism.css" rel="stylesheet">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="/images/favicon.png">
@@ -92,7 +93,7 @@
 								
 									<li class="nav-item "><a href="/case-studies/argumentation/">One To Many Persuasion Games</a></li>
 								
-									<li class="nav-item "><a href="/case-studies/cra/">Class Resposability Assignment</a></li>
+									<li class="nav-item "><a href="/case-studies/cra/">Class Responsibility Assignment</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/resource/">Resource Allocation</a></li>
 								
@@ -136,10 +137,10 @@
 follow these instructions for the recommended steps on how you can do this.</p>
 
 <p>The only changes accepted to the project will be accepted as pull requests to
-the <code class="highlighter-rouge">github.com/mde-optimiser/mde_optimiser</code> repository.</p>
+the <code>github.com/mde-optimiser/mde_optimiser</code> repository.</p>
 
-<p>Any pull request must be added to the <code class="highlighter-rouge">develop</code> branch. When a pull request is
-created a build will be triggered and if successful the <code class="highlighter-rouge">develop</code> repository will
+<p>Any pull request must be added to the <code>develop</code> branch. When a pull request is
+created a build will be triggered and if successful the <code>develop</code> repository will
 be updated with the just built version of the code.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
@@ -149,16 +150,16 @@ be updated with the just built version of the code.</p>
 distribution or install XText and XTend and their dependencies in your current
 Eclipse installation.</li>
   <li>Install and configure the <a href="https://maven.apache.org">Maven</a> build tool and add
-it to the command line path. Recommended minimum version is <code class="highlighter-rouge">3.3.9</code>.</li>
+it to the command line path. Recommended minimum version is <code>3.3.9</code>.</li>
 </ul>
 
 <h2 id="getting-the-mdeo-code">Getting the MDEO code</h2>
 
 <ul>
-  <li>Clone the MDEOptimiser repo from <code class="highlighter-rouge">https://github.com/mde-optimiser/mde_optimiser</code></li>
-  <li>Run <code class="highlighter-rouge">mvn clean compile</code> inside the <code class="highlighter-rouge">src</code> directory of the directory where you
+  <li>Clone the MDEOptimiser repo from <code>https://github.com/mde-optimiser/mde_optimiser</code></li>
+  <li>Run <code>mvn clean compile</code> inside the <code>src</code> directory of the directory where you
 cloned the repository.</li>
-  <li>Open Eclipse and go to <code class="highlighter-rouge">File &gt; Import &gt; Existing Maven Projects</code> and navigate
+  <li>Open Eclipse and go to <code>File &gt; Import &gt; Existing Maven Projects</code> and navigate
 to the src folder located in the mde_optimiser folder where the repository has
 been cloned.</li>
   <li>Ensure that the workspace builds without any problems or if there are any problems
@@ -173,5 +174,10 @@ reported by the Eclipse builder try to fix them.</li>
 				document.body.classList.toggle("nav-open");
 			});
 		</script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+		<script src="/scripts/prism.js"></script>
+		<script src="/scripts/prism-mopt.js"></script>
 	</body>
 </html>

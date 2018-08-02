@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
 		<link rel="stylesheet" href="/css/main.css">
+		<link href="/css/prism.css" rel="stylesheet">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="/images/favicon.png">
@@ -92,7 +93,7 @@
 								
 									<li class="nav-item "><a href="/case-studies/argumentation/">One To Many Persuasion Games</a></li>
 								
-									<li class="nav-item "><a href="/case-studies/cra/">Class Resposability Assignment</a></li>
+									<li class="nav-item "><a href="/case-studies/cra/">Class Responsibility Assignment</a></li>
 								
 									<li class="nav-item "><a href="/case-studies/resource/">Resource Allocation</a></li>
 								
@@ -132,49 +133,49 @@
 				<h3>MDEO DSL</h3>
 			</div>
 			<article class="content">
-				<p><img src="/images/dsl.png" alt="MDEO DSL" /></p>
+				<pre data-src="https://raw.githubusercontent.com/mde-optimiser/case_studies/master/class-responsability-assignment/mdeo/cra/src/main/java/cra_manual_rules.mopt" data-download-link="" data-download-link-label="Download this file" class="line-numbers"></pre>
 
 <h2 id="dsl">DSL</h2>
 
 <ul>
   <li>
-    <p><code class="highlighter-rouge">basepath</code> - This refers to the basepath relative to the project root, where
+    <p><code>basepath</code> - This refers to the basepath relative to the project root, where
 the optimisation artifacts can be found.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">metamodel</code> - This specifies the name of the ecore metamodel file. The filename
-is relative to the <code class="highlighter-rouge">basepath</code>. Using this keyword it is possible to also specify the namespace of an EPackage class that can be instantiated to load the metamodel at runtime. Refer to the Resource Allocation case study for an example.</p>
+    <p><code>metamodel</code> - This specifies the name of the ecore metamodel file. The filename
+is relative to the <code>basepath</code>. Using this keyword it is possible to also specify the namespace of an EPackage class that can be instantiated to load the metamodel at runtime. Refer to the Resource Allocation case study for an example.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">model</code> - This specifies the input model file name, relative to the <code class="highlighter-rouge">basepath</code></p>
+    <p><code>model</code> - This specifies the input model file name, relative to the <code>basepath</code></p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">initialise</code> - This keyword allows the user to define a custom class that will be used to initialise each of the initial population individuals. For an example implementation please refer to the Resource allocation case study.</p>
+    <p><code>initialise</code> - This keyword allows the user to define a custom class that will be used to initialise each of the initial population individuals. For an example implementation please refer to the Resource allocation case study.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">objective</code> - This specifies the objective function. The objective can be specified
+    <p><code>objective</code> - This specifies the objective function. The objective can be specified
 using OCL or Java/XTend by implementing the IGuidanceFunction interface.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">constraint</code> - This specifies the constraint to be used during the optimisation.
+    <p><code>constraint</code> - This specifies the constraint to be used during the optimisation.
 The constraint can be specified using OCL or Java/XTend by implementing the IGuidanceFunction.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">mutate</code> - This specifies the Henshin mutation rule to be used during the search.</p>
+    <p><code>mutate</code> - This specifies the Henshin mutation rule to be used during the search.</p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">breed</code> - This specifies the Henshin breeding rule to be used during the search.
-The different between <code class="highlighter-rouge">mutate</code> and <code class="highlighter-rouge">breed</code> is that <code class="highlighter-rouge">breed</code> takes two parents as input
-as opposed to one for <code class="highlighter-rouge">mutate</code></p>
+    <p><code>breed</code> - This specifies the Henshin breeding rule to be used during the search.
+The different between <code>mutate</code> and <code>breed</code> is that <code>breed</code> takes two parents as input
+as opposed to one for <code>mutate</code></p>
   </li>
   <li>
-    <p><code class="highlighter-rouge">optimisation</code> - This specifies the optimsation algorithm configuration.</p>
+    <p><code>optimisation</code> - This specifies the optimsation algorithm configuration.</p>
   </li>
 </ul>
 
 <h4 id="manual-mutation-operators">Manual mutation operators</h4>
 
-<p>The <code class="highlighter-rouge">mutate</code> keyword can be used to specify predefined mutation operators implemented using Henshin. The tool supports both rules and units.</p>
+<p>The <code>mutate</code> keyword can be used to specify predefined mutation operators implemented using Henshin. The tool supports both rules and units.</p>
 
 <h4 id="automatic-mutation-generation">Automatic mutation generation</h4>
 
@@ -184,7 +185,7 @@ as opposed to one for <code class="highlighter-rouge">mutate</code></p>
 
 <ul>
   <li>mutate {Node} - This specifies that the tool should generate all the combinations of mutation operators for the specified node.</li>
-  <li>mutate {Node, edge} - This specifies that the tool should generate all the combinations of mutation operators for the <code class="highlighter-rouge">edge</code> edge for node <code class="highlighter-rouge">Node</code>.</li>
+  <li>mutate {Node, edge} - This specifies that the tool should generate all the combinations of mutation operators for the <code>edge</code> edge for node <code>Node</code>.</li>
 </ul>
 
 			</article>
@@ -195,5 +196,10 @@ as opposed to one for <code class="highlighter-rouge">mutate</code></p>
 				document.body.classList.toggle("nav-open");
 			});
 		</script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+		<script src="/scripts/prism.js"></script>
+		<script src="/scripts/prism-mopt.js"></script>
 	</body>
 </html>
