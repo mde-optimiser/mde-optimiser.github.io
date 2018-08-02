@@ -27,7 +27,7 @@ use from one of the Eclipse Update sites below.
 ### Installation steps
 
 It is recommended to start from an
-[Eclipse For Java and  DSL Developers](https://www.eclipse.org/downloads/packages/release/Oxygen/1A) distribution. Currently, MDEOptimiser has been tested with Eclipse Oxygen.
+[Eclipse For Java and  DSL Developers](https://www.eclipse.org/downloads/packages/release/photon/r/eclipse-ide-java-and-dsl-developers) distribution. Currently, MDEOptimiser has been tested with Eclipse Photon.
 
 * Copy the desired MDEO version `Eclipse` update site url from above.
 * Open the `Eclipse > Help > Install New Software` window.
