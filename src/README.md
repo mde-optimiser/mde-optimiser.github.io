@@ -57,3 +57,9 @@ $ bundle exec jekyll serve -w
 ### Navigation
 
 * Change `site.show_full_navigation` to control all or only the current navigation group being open.
+
+### Prism Highlighter
+
+Using the following plugins:
+
+https://prismjs.com/plugins/file-highlight/ - To highlight a file from a remote url.

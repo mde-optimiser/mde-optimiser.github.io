@@ -3,7 +3,8 @@ title: MDEO DSL
 ---
 
 
-![MDEO DSL](/images/dsl.png)
+{% rhighlight https://raw.githubusercontent.com/mde-optimiser/case_studies/master/class-responsability-assignment/mdeo/cra/src/main/java/cra_manual_rules.mopt %}
+
 
 
 ## DSL
@@ -30,7 +31,7 @@ using OCL or Java/XTend by implementing the IGuidanceFunction interface.
 The constraint can be specified using OCL or Java/XTend by implementing the IGuidanceFunction.
 
 
-* `mutate` - This specifies the Henshin mutation rule to be used during the search. 
+* `mutate` - This specifies the Henshin mutation rule to be used during the search.
 
 
 * `breed` - This specifies the Henshin breeding rule to be used during the search.

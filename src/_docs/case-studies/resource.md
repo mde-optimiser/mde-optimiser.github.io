@@ -4,7 +4,7 @@ category: Case Studies
 order: 2
 ---
 
-This case study has been presented at the 
+This case study has been presented at the
 [Transformation Tool Contest 2018 workshop](http://www.transformation-tool-contest.eu/).
 
 An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/case_studies) repository.
@@ -35,7 +35,7 @@ The problem has the following constraints:
 
 In the figure below we show an implementation of the case study using our DSL.
 
-![Resource Allocation Problem DSL](/images/case_studies/resource-allocation/dsl.png)
+{% rhighlight https://raw.githubusercontent.com/mde-optimiser/case_studies/master/ttc-18/mdeo/resource-allocation/src/main/java/resource-allocation.mopt %}
 
 In our implementation we have used four mutation operators to explore the search space. These have been implemented using Henshin and are shown in the figures below.
 
@@ -89,4 +89,3 @@ These operators are rules or units that are reused by other operators in our imp
 ##### Cleanup Unit
 
 ![Cleanup Unit](/images/case_studies/resource-allocation/operators/cleanup-unit.png)
-

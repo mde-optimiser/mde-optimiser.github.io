@@ -20,6 +20,10 @@ social:
     - https://github.com/mde-optimiser
 
 # -----
+# Highlighter disable default
+highlighter: none
+
+# -----
 # Build
 
 permalink: pretty

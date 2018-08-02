@@ -8,6 +8,7 @@
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+		<link href="{{ site.baseurl }}/css/prism.css" rel="stylesheet">
 		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
@@ -109,5 +110,10 @@
 				document.body.classList.toggle("nav-open");
 			});
 		</script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+		<script src="{{ site.baseurl }}/scripts/prism.js"></script>
+		<script src="{{ site.baseurl }}/scripts/prism-mopt.js"></script>
 	</body>
 </html>
