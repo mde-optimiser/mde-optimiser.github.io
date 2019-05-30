@@ -72,3 +72,4 @@ types:
 # Jekyll scholar
 scholar:
   style: apa
+  bibliography_template: bib
