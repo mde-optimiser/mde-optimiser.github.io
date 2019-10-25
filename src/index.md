@@ -27,7 +27,7 @@ use from one of the Eclipse Update sites below.
 ### Installation steps
 
 It is recommended to start from an
-[Eclipse For Java and  DSL Developers](https://www.eclipse.org/downloads/packages/release/photon/r/eclipse-ide-java-and-dsl-developers) distribution. Currently, MDEOptimiser has been tested with Eclipse Photon.
+[Eclipse For Java and  DSL Developers 2019-03](https://www.eclipse.org/downloads/packages/release/photon/r/eclipse-ide-java-and-dsl-developers) distribution. Currently, MDEOptimiser has been tested with Eclipse 2019-03 and Java 11.
 
 * Copy the desired MDEO version `Eclipse` update site url from above.
 * Open the `Eclipse > Help > Install New Software` window.
