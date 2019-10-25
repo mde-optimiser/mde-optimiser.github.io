@@ -21,8 +21,8 @@ use from one of the Eclipse Update sites below.
 
 | Version       | Update Site                               |
 | ------------- |:-----------------------------------------:|
-| Develop       | [http://mde-optimiser.github.io/mdeo_repo/develop/](http://mde-optimiser.github.io/mdeo_repo/develop/) |
-| Release       | [http://mde-optimiser.github.io/mdeo_repo/release/](http://mde-optimiser.github.io/mdeo_repo/release/) |
+| Develop       | [http://mde-optimiser.github.io/mdeo_repo/src/composite/develop/](http://mde-optimiser.github.io/mdeo_repo/src/composite/develop/) |
+| Release       | [http://mde-optimiser.github.io/mdeo_repo/src/composite/release/](http://mde-optimiser.github.io/mdeo_repo/src/composite/release/) |
 
 ### Installation steps
 
