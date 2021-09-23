@@ -9,13 +9,13 @@ through a simple DSL.
 
 | Branch       | Status                                     |
 | ------------- |:-----------------------------------------:|
-| Develop       | ![DEVELOP branch build status](https://travis-ci.org/mde-optimiser/mde_optimiser.svg?branch=develop) |
-| Release       | ![MASTER branch build status](https://travis-ci.org/mde-optimiser/mde_optimiser.svg?branch=master)   |
+| Develop       | [![Dev Build](https://github.com/mde-optimiser/mde_optimiser/actions/workflows/dev_merge.yml/badge.svg)](https://github.com/mde-optimiser/mde_optimiser/actions/workflows/dev_merge.yml) |
+| Release       |  [![Master Build](https://github.com/mde-optimiser/mde_optimiser/actions/workflows/master_merge.yml/badge.svg)](https://github.com/mde-optimiser/mde_optimiser/actions/workflows/master_merge.yml)  |
+
 
 ## Getting Started
 
-Using MDEOptimiser is easy. Install the version of MDEOptimiser you would like to
-use from one of the Eclipse Update sites below.
+Install the version of MDEOptimiser you would like to use from one of the Eclipse Update sites below.
 
 
 
@@ -40,7 +40,7 @@ It is recommended to start from an
 
 For a set of MDEO example projects please browse the [Case Studies](/case-studies/cra/) section of this website.
 The source code of the case studies can be browsed on
-[http://github.com/mde-optimiser/case_studies](https://github.com/mde-optimiser/case_studies)
+[http://github.com/mde-optimiser/mde_optimiser](https://github.com/mde-optimiser/mde_optimiser/tree/master/examples/problems)
 and they can be imported as existing Eclipse projects.
 
 To run the code for a case study:
@@ -55,7 +55,7 @@ jar dependencies
 
 ### Tutorial
 
-Users can find the artifacts of a tutorial Henshin: A Model Transformation Language and its Use for Search-Based Model Optimisation in MDEOptimiser at this [url](http://danielstrueber.de/tutorial/).
+Users can find the artifacts of the tutorial Henshin: A Model Transformation Language and its Use for Search-Based Model Optimisation in MDEOptimiser at this [url](http://danielstrueber.de/tutorial/).
 
 ### Problems and bugs
 
@@ -64,5 +64,5 @@ tool repository [here](https://github.com/mde-optimiser/mde_optimiser).
 
 If you have any issues with running the tool or any other questions, please contact one of the authors:
 
-* [Alex Burdusel](https://nms.kcl.ac.uk/alex.burdusel/)
+* [Dr. Alexandru Burdusel](https://nms.kcl.ac.uk/alex.burdusel/)
 * [Dr. Steffen Zschaler](http://steffen-zschaler.de)

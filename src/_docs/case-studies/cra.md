@@ -10,7 +10,7 @@ This case study has been presented at the
 A link to the final version of the paper with our solution presented there can
 be found [here](http://www.steffen-zschaler.de/download.php?type=pdf&id=115).
 
-An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/case_studies) repository.
+An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/mde_optimiser) repository.
 
 #### Introduction
 

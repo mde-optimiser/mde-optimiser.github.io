@@ -4,7 +4,7 @@ category: Case Studies
 order: 2
 ---
 
-An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/case_studies) repository.
+An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/mde_optimiser) repository.
 
 #### Introduction
 

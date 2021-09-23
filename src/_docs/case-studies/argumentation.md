@@ -9,7 +9,7 @@ This case study has been submitted for publication at the
 
 A link to the final version of the paper will be published as soon as it becomes available.
 
-An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/case_studies) repository.
+An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/mde_optimiser) repository.
 
 #### Introduction
 
