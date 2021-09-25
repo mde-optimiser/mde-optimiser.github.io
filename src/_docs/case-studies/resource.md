@@ -7,7 +7,7 @@ order: 2
 This case study has been presented at the
 [Transformation Tool Contest 2018 workshop](http://www.transformation-tool-contest.eu/).
 
-An example implementation using MDEOptimiser can be found in [this](https://github.com/mde-optimiser/mde_optimiser) repository.
+An example implementation using MDEOptimiser can be found [here](https://github.com/mde-optimiser/mde_optimiser).
 
 #### Introduction
 
