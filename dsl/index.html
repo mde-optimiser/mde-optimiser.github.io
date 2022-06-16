@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Jekyll v3.9.1">
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link href="/css/prism.css" rel="stylesheet">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		<!-- Begin Jekyll SEO tag v2.0.0 -->
+<title>MDEO DSL - MDEOptimiser</title>
+<meta property="og:title" content="MDEO DSL" />
+<meta name="description" content="Tool documentation website for MDEOptimiser." />
+<meta property="og:description" content="Tool documentation website for MDEOptimiser." />
+<link rel="canonical" href="https://mde-optimiser.github.io/dsl/" />
+<meta property="og:url" content="https://mde-optimiser.github.io/dsl/" />
+<meta property="og:site_name" content="MDEOptimiser" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "headline": "MDEO DSL",
+    "description": "Tool documentation website for MDEOptimiser.",
+    "logo": "https://mde-optimiser.github.io/siteicon.png",
+    "url": "https://mde-optimiser.github.io/dsl/"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+
+		
+	</head>
+
+	<body>
+		<header>
+			<h1>
+				<a href="/"><img src="/images/siteicon.png" width="40" height="40" alt="MDEOptimiser logo"></a>
+				MDEOptimiser
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">MDEOptimiser</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/developers/">Developers</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level current">
+						
+						<a href="/dsl/">MDEO DSL</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/publications/">Publications</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/case-studies/default/">Case Studies</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/case-studies/default/">Overview</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/argumentation/">One To Many Persuasion Games</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/cra/">Class Responsibility Assignment</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/resource/">Resource Allocation</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/scrum/">Scrum Planning</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/stacks/">Stack</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/mutation-generation/overview/">Mutation Generation</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/mutation-generation/overview/">Overview</a></li>
+								
+									<li class="nav-item "><a href="/mutation-generation/acpso-generation/">aCPSO Generation</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<!--<h2>MDEOptimiser</h2>-->
+				<h3>MDEO DSL</h3>
+			</div>
+			<article class="content">
+				<pre data-src="https://raw.githubusercontent.com/mde-optimiser/case_studies/master/class-responsability-assignment/mdeo/cra/src/main/java/cra_manual_rules.mopt" data-download-link="" data-download-link-label="Download this file" class="line-numbers"></pre>
+
+<h2 id="dsl">DSL</h2>
+
+<ul>
+  <li>
+    <p><code>basepath</code> - This refers to the basepath relative to the project root, where
+the optimisation artifacts can be found.</p>
+  </li>
+  <li>
+    <p><code>metamodel</code> - This specifies the name of the ecore metamodel file. The filename
+is relative to the <code>basepath</code>. Using this keyword it is possible to also specify the namespace of an EPackage class that can be instantiated to load the metamodel at runtime. Refer to the Resource Allocation case study for an example.</p>
+  </li>
+  <li>
+    <p><code>model</code> - This specifies the input model file name, relative to the <code>basepath</code></p>
+  </li>
+  <li>
+    <p><code>initialise</code> - This keyword allows the user to define a custom class that will be used to initialise each of the initial population individuals. For an example implementation please refer to the Resource allocation case study.</p>
+  </li>
+  <li>
+    <p><code>objective</code> - This specifies the objective function. The objective can be specified
+using OCL or Java/XTend by implementing the IGuidanceFunction interface.</p>
+  </li>
+  <li>
+    <p><code>constraint</code> - This specifies the constraint to be used during the optimisation.
+The constraint can be specified using OCL or Java/XTend by implementing the IGuidanceFunction.</p>
+  </li>
+  <li>
+    <p><code>mutate</code> - This specifies the Henshin mutation rule to be used during the search.</p>
+  </li>
+  <li>
+    <p><code>breed</code> - This specifies the Henshin breeding rule to be used during the search.
+The different between <code>mutate</code> and <code>breed</code> is that <code>breed</code> takes two parents as input
+as opposed to one for <code>mutate</code></p>
+  </li>
+  <li>
+    <p><code>optimisation</code> - This specifies the optimsation algorithm configuration.</p>
+  </li>
+</ul>
+
+<h4 id="manual-mutation-operators">Manual mutation operators</h4>
+
+<p>The <code>mutate</code> keyword can be used to specify predefined mutation operators implemented using Henshin. The tool supports both rules and units.</p>
+
+<h4 id="automatic-mutation-generation">Automatic mutation generation</h4>
+
+<p>MDEOptimiser can also be used to automatically generate atomic mutation operators that can create, delete a node and add, remove, change or swap an edge.</p>
+
+<p>The syntax to do this is the following:</p>
+
+<ul>
+  <li>mutate {Node} - This specifies that the tool should generate all the combinations of mutation operators for the specified node.</li>
+  <li>mutate {Node, edge} - This specifies that the tool should generate all the combinations of mutation operators for the <code>edge</code> edge for node <code>Node</code>.</li>
+</ul>
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+		<script src="/scripts/prism.js"></script>
+		<script src="/scripts/prism-mopt.js"></script>
+	</body>
+</html>

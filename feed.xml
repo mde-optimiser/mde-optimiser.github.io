@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="https://mde-optimiser.github.io/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.9.1">Jekyll</generator><link href="https://mde-optimiser.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mde-optimiser.github.io/" rel="alternate" type="text/html" /><updated>2022-06-16T16:00:09+01:00</updated><id>https://mde-optimiser.github.io/</id><title type="html">MDEOptimiser</title><subtitle>Tool documentation website for MDEOptimiser.</subtitle><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><entry><title type="html">Automatic generation of atomic consistnecy preserving search operators</title><link href="https://mde-optimiser.github.io/2018/06/20/mde-optimiser-atomic-search-operators-generation/" rel="alternate" type="text/html" title="Automatic generation of atomic consistnecy preserving search operators" /><published>2018-06-20T00:00:00+01:00</published><updated>2018-06-20T00:00:00+01:00</updated><id>https://mde-optimiser.github.io/2018/06/20/mde-optimiser-atomic-search-operators-generation</id><content type="html" xml:base="https://mde-optimiser.github.io/2018/06/20/mde-optimiser-atomic-search-operators-generation/">&lt;p&gt;We are happy to announce the release of the latest version of MDEOptimiser that includes a number of new features and improvements.&lt;/p&gt;
+
+&lt;h4 id=&quot;new-features&quot;&gt;New features:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;automatic generation of atomic consistency preserving search operators;&lt;/li&gt;
+  &lt;li&gt;support for custom model initialisation;&lt;/li&gt;
+  &lt;li&gt;automatic generation of pareto front charts for problems with two objectives;&lt;/li&gt;
+  &lt;li&gt;serialisation of experiments output data in CSV format and space delimited objectives;&lt;/li&gt;
+  &lt;li&gt;support for crossover operators;&lt;/li&gt;
+  &lt;li&gt;support for mutation and crossover operator parameters;&lt;/li&gt;
+  &lt;li&gt;support for running experiments in headless mode;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Many thanks to the following people for all their help during the development of this version of MDEOptimiser: Steffen Zschaler, Stefan John, Daniel Struber, Timo Kehrer.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">We are happy to announce the release of the latest version of MDEOptimiser that includes a number of new features and improvements.</summary></entry><entry><title type="html">MDEOptimiser public release</title><link href="https://mde-optimiser.github.io/2017/10/15/tool-website-announcement/" rel="alternate" type="text/html" title="MDEOptimiser public release" /><published>2017-10-15T00:00:00+01:00</published><updated>2017-10-15T00:00:00+01:00</updated><id>https://mde-optimiser.github.io/2017/10/15/tool-website-announcement</id><content type="html" xml:base="https://mde-optimiser.github.io/2017/10/15/tool-website-announcement/">&lt;p&gt;This is the first public release of MDEOptimiser.&lt;/p&gt;
+
+&lt;p&gt;Follow the instructions on the &lt;a href=&quot;index.html&quot;&gt;Description&lt;/a&gt; page to install
+this version of the tool.&lt;/p&gt;</content><author><name>{&quot;name&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;twitter&quot;=&gt;nil}</name></author><summary type="html">This is the first public release of MDEOptimiser.</summary></entry></feed>

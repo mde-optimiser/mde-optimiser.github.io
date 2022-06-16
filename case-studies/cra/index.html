@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="generator" content="Jekyll v3.9.1">
+
+		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
+		<link rel="stylesheet" href="/css/main.css">
+		<link href="/css/prism.css" rel="stylesheet">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" href="/touch-icon.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/images/favicon.png">
+
+		<!-- Begin Jekyll SEO tag v2.0.0 -->
+<title>Class Responsibility Assignment - MDEOptimiser</title>
+<meta property="og:title" content="Class Responsibility Assignment" />
+<meta name="description" content="This case study has been presented at theTransformation Tool Contest 2016 workshop." />
+<meta property="og:description" content="This case study has been presented at theTransformation Tool Contest 2016 workshop." />
+<link rel="canonical" href="https://mde-optimiser.github.io/case-studies/cra/" />
+<meta property="og:url" content="https://mde-optimiser.github.io/case-studies/cra/" />
+<meta property="og:site_name" content="MDEOptimiser" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "headline": "Class Responsibility Assignment",
+    "description": "This case study has been presented at theTransformation Tool Contest 2016 workshop.",
+    "logo": "https://mde-optimiser.github.io/siteicon.png",
+    "url": "https://mde-optimiser.github.io/case-studies/cra/"
+  }
+</script>
+<!-- End Jekyll SEO tag -->
+
+		
+	</head>
+
+	<body>
+		<header>
+			<h1>
+				<a href="/"><img src="/images/siteicon.png" width="40" height="40" alt="MDEOptimiser logo"></a>
+				MDEOptimiser
+				<button type="button" class="open-nav" id="open-nav"></button>
+			</h1>
+
+			<form action="/search/" method="get">
+				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+				<input type="submit" value="Search" style="display: none;">
+			</form>
+
+			<nav class="full-navigation">
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/">MDEOptimiser</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/developers/">Developers</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/dsl/">MDEO DSL</a>
+					</li>
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/publications/">Publications</a>
+					</li>
+				</ul>
+
+				<ul>
+					
+					
+						<li class="nav-item top-level current">
+							
+							<a href="/case-studies/default/">Case Studies</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/case-studies/default/">Overview</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/argumentation/">One To Many Persuasion Games</a></li>
+								
+									<li class="nav-item current"><a href="/case-studies/cra/">Class Responsibility Assignment</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/nrp/">Next Release Problem</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/resource/">Resource Allocation</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/scrum/">Scrum Planning</a></li>
+								
+									<li class="nav-item "><a href="/case-studies/stacks/">Stack</a></li>
+								
+							</ul>
+						</li>
+					
+						<li class="nav-item top-level ">
+							
+							<a href="/mutation-generation/overview/">Mutation Generation</a>
+							<ul>
+								
+									<li class="nav-item "><a href="/mutation-generation/overview/">Overview</a></li>
+								
+									<li class="nav-item "><a href="/mutation-generation/acpso-generation/">aCPSO Generation</a></li>
+								
+							</ul>
+						</li>
+					
+				</ul>
+
+				<ul>
+					<li class="nav-item top-level ">
+						
+						<a href="/changelog/">Change Log</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section class="main">
+			<div class="page-header">
+				<!--<h2>Case Studies</h2>-->
+				<h3>Class Responsibility Assignment</h3>
+			</div>
+			<article class="content">
+				<p>This case study has been presented at the
+<a href="http://www.transformation-tool-contest.eu/">Transformation Tool Contest 2016 workshop</a>.</p>
+
+<p>A link to the final version of the paper with our solution presented there can
+be found <a href="http://www.steffen-zschaler.de/download.php?type=pdf&amp;id=115">here</a>.</p>
+
+<p>An example implementation using MDEOptimiser can be found in <a href="https://github.com/mde-optimiser/mde_optimiser">this</a> repository.</p>
+
+<h4 id="introduction">Introduction</h4>
+
+<p>The Class Responsibility Assignment (CRA) case study has been introduced at the 2016 Transformation Tool Contest. The problem that has to be solved comes from the software engineering field. The goal of this problem is to transform a procedural software application to an object oriented architecture while maintaining good cohesion and coupling. The quality of the produced solutions is measured using the CRA index, as a single objective. The problem supplies a responsibility dependency graph, that contains a set of functions and attributes with dependencies between them. In the metamodel, these entities are instances of the abstract type Feature.</p>
+
+<p>The CRA case study authors provide a set of five input models. The difference between them is the number of Features present. Input model A, is the smallest model with only nine features. The largest model provided is model E with 160 features. Across all models, each set of features has an increasing number of dependencies between them. A summary of all the input models is included in the table below.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th style="text-align: center">Model A</th>
+      <th style="text-align: center">Model B</th>
+      <th style="text-align: center">Model C</th>
+      <th style="text-align: center">Model D</th>
+      <th style="text-align: center">Model E</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Attributes</td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">40</td>
+      <td style="text-align: center">80</td>
+    </tr>
+    <tr>
+      <td>Methods</td>
+      <td style="text-align: center">4</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">40</td>
+      <td style="text-align: center">80</td>
+    </tr>
+    <tr>
+      <td>Data Dep.</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">50</td>
+      <td style="text-align: center">150</td>
+      <td style="text-align: center">300</td>
+    </tr>
+    <tr>
+      <td>Functional Dep.</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">15</td>
+      <td style="text-align: center">50</td>
+      <td style="text-align: center">150</td>
+      <td style="text-align: center">300</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="implementation">Implementation</h4>
+
+<p><img src="/images/case_studies/cra/metamodel.png" alt="Class Responsibility Assignment Metamodel" /></p>
+
+<p>In the figure above, we show a metamodel of this problem.</p>
+
+<p>To find a solution, the user is required to create Classes in the ClassModel and assign Features to them such that: all Features are assigned to a Class; the model with the highest CRA index value is found. The problem has an additional constraint requiring that each Feature is assigned to only one Class at a time. We have specified this problem with a single objective:</p>
+
+<pre><code>1. [Objective 1] maximise the CRA index.
+</code></pre>
+
+<p>The problem also has one constraint:</p>
+
+<pre><code>1. [Constraint 1] all Features must be encapsulated in a Class.
+</code></pre>
+
+<p>In the figure below we show an implementation of the case study using our DSL.</p>
+
+<pre data-src="https://raw.githubusercontent.com/mde-optimiser/case_studies/master/class-responsability-assignment/mdeo/cra/src/main/java/cra_manual_rules.mopt" data-download-link="" data-download-link-label="Download this file" class="line-numbers"></pre>
+
+<p>In our implementation we have used four mutation operators to explore the search space. These have been implemented using Henshin and are shown in the figure below.</p>
+
+<p><img src="/images/case_studies/cra/operators.png" alt="Class Responsibility Assignment Search Operators" /></p>
+
+<h4 id="automatic-mutation-generation">Automatic mutation generation</h4>
+
+<p>In the figure below, we include an example of the DSL that allows the user to specify the nodes</p>
+
+<pre data-src="https://raw.githubusercontent.com/mde-optimiser/case_studies/master/class-responsability-assignment/mdeo/cra/src/main/java/cra_rulegen.mopt" data-download-link="" data-download-link-label="Download this file" class="line-numbers"></pre>
+
+			</article>
+		</section>
+
+		<script>
+			document.getElementById("open-nav").addEventListener("click", function () {
+				document.body.classList.toggle("nav-open");
+			});
+		</script>
+
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+		<script src="/scripts/prism.js"></script>
+		<script src="/scripts/prism-mopt.js"></script>
+	</body>
+</html>
